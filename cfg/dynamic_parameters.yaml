@@ -1,0 +1,27 @@
+LiDAR:
+  port_name: /dev/ttyUSB0
+  baud_rate: 256000
+  initialize_scan_num: 25
+  scan_num: 4
+  buffer_capacity: 8196
+  mode_id: 4
+Analysis:
+  proc_freq: 15
+  max_dist: 10
+  dist_threshold: 0.05
+  num_threshold: 10
+  static_radius: 0.2
+  static_min_neighbor: 1
+  dynamic_radius: 0.10
+  dynamic_min_neighbor: 12
+  cluster_tolerance: 0.2
+  min_cluster_size: 10
+  max_cluster_size: 25000
+Alarm:
+  port_name: /dev/ttyUSB1
+  baud_rate: 9600
+  volume: 0
+Visualization:
+  be_visualized: true
+  port: 4000
+verbose: true

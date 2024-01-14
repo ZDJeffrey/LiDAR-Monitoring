@@ -1,0 +1,37 @@
+LiDAR:
+  port_name: /dev/ttyLiDAR                    # 端口名称
+  baud_rate: 256000                           # 波特率
+  initialize_scan_num: 25                     # 初始化时的扫描次数
+  scan_num: 4                                 # 扫描的次数
+  buffer_capacity: 8196                       # 缓冲区容量
+  mode_id: 4                                  # 模式ID
+    # id:0, mode:Standard           max_distance:16.000000  us_per_sample:252.000000
+    # id:1, mode:Express            max_distance:16.000000  us_per_sample:126.000000
+    # id:2, mode:Boost              max_distance:25.000000  us_per_sample:63.000000
+    # id:3, mode:Sensitivity        max_distance:25.000000  us_per_sample:63.000000
+    # id:4, mode:Stability          max_distance:25.000000  us_per_sample:100.000000
+    # id:5, mode:UltraSensitivity   max_distance:25.000000  us_per_sample:63.000000
+
+Analysis:
+  proc_freq: 15                               # 点云处理频率
+  max_dist: 10                                # 最大距离
+  dist_threshold: 0.05                        # 偏离距离阈值
+  num_threshold: 10                           # 偏离点数量阈值
+  static_radius: 0.2                          # 静态点云滤波半径
+  static_min_neighbor: 1                      # 静态点云滤波邻近点数量
+  dynamic_radius: 0.10                        # 动态点云滤波半径
+  dynamic_min_neighbor: 12                    # 动态点云滤波邻近点数量
+  cluster_tolerance: 0.2                      # 聚类时的距离阈值
+  min_cluster_size: 10                        # 聚类时的最小聚类数量
+  max_cluster_size: 25000                     # 聚类时的最大聚类数量
+  
+Alarm:
+  port_name: /dev/ttyAlarm                     # 端口名称
+  baud_rate: 9600                             # 波特率
+  volume: 0                                   # 音量
+
+Visualization:
+  be_visualized: true                         # 是否可视化
+  port: 4000                                  # 端口号
+  
+verbose: true                                 # 输出信息

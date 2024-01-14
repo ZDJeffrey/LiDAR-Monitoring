@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/shaders">
+        <file>static_pointcloud.frag</file>
+        <file>static_pointcloud.vert</file>
+        <file>safe_pointcloud.vert</file>
+        <file>safe_pointcloud.frag</file>
+        <file>warning_pointcloud.frag</file>
+        <file>warning_pointcloud.vert</file>
+        <file>coordinate.frag</file>
+        <file>coordinate.vert</file>
+        <file>bounding_box.frag</file>
+        <file>bounding_box.vert</file>
+    </qresource>
+</RCC>
